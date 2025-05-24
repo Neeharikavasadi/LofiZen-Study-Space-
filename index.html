@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LofiZen Study Space</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Logo Animation Screen (GIF) -->
+    <div id="logoScreen">
+        <img src="images/logo.gif" id="logoGif" alt="Loading...">
+    </div>
+
+    <!-- Static Logo -->
+    <img src="images/logobg.png" id="staticLogo" alt="Logo" style="display: none;">
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="backgroundVideo" style="display: none;">
+        <source id="videoSource" src="videos/bluebg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container" style="display: none;">
+        <h1>LofiZen Study Space 🎧</h1>
+
+        <!-- Theme Selector -->
+        <label for="themeSelector">Choose a Theme:</label>
+        <select id="themeSelector">
+            <option value="" selected disabled>Themes</option>
+            <option value="blue">Hikari Haven</option>
+            <option value="green">Exotic Botanic</option>
+            <option value="purple">Neon Horizon</option>
+            <option value="pink">Blossom Café</option>
+            <option value="orange">Golden Hour</option>
+        </select>
+
+        <!-- Music Player -->
+        <div class="player">
+            <audio id="music" loop>
+                <source id="musicSource" src="music/bluesound.mp3" type="audio/mp3">
+            </audio>
+
+            <button id="playPauseBtn">▶ Play</button>
+
+            <!-- Volume Control -->
+            <div class="volume-container">
+                <label for="volumeControl">🔊 Volume:</label>
+                <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+            </div>
+        </div>
+
+        <!-- Focus Timer -->
+        <div class="focus-timer">
+            <h2>Focus Timer</h2>
+            <input type="number" id="focusMinutes" placeholder="Minutes">
+            <div class="focus-buttons">
+                <button id="startFocusTimer">Start</button>
+                <button id="pauseFocusTimer">Pause</button>
+                <button id="stopFocusTimer">Stop</button>
+            </div>
+            <p id="focusTimerDisplay">00:00</p>
+        </div>
+
+        <!-- Alarm Sound -->
+        <audio id="alarmSound">
+            <source src="images/notic.wav" type="audio/mpeg">
+        </audio>
+
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

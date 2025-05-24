@@ -1,0 +1,280 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Apply Background Image */
+html {
+    background: url("images/lofi.jpeg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Make headings bold */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+/* Style buttons and labels */
+button, select, label {
+    font-weight: 600;
+}
+
+/* Logo Animation Screen */
+#logoScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Enlarged Logo GIF */
+#logoGif {
+    width: 800px;
+    opacity: 1;
+    transition: all 1.5s ease-in-out;
+}
+
+/* Hide the rest of the website initially */
+.container, #backgroundVideo, #staticLogo {
+    display: none;
+}
+
+/* Static Logo (After GIF) */
+#staticLogo {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 250px;
+    height: auto;
+    z-index: 10;
+}
+
+/* Background Video Styles */
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Glassmorphism Container */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 4px 20px rgba(255, 253, 253, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Select and Button Styling */
+select, button {
+    margin-top: 12px;
+    padding: 12px 15px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Select Dropdown Styling */
+select {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid rgba(248, 245, 245, 0.93);
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Ensure readability */
+select option {
+    background: white;
+    color: black;
+    padding: 10px;
+}
+
+/* Hover effect */
+select:hover {
+    background: rgb(255, 255, 255);
+    transform: scale(1.05);
+}
+
+/* Increase font size for "Choose a Theme:" label */
+label {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Play & Start Buttons - Transparent */
+button {
+    background: transparent;  /* Fully transparent background */
+    color: white;  /* Keep text visible */
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: none; /* Remove shadow */
+    letter-spacing: 1px;
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Add subtle white border */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect - Slight Glow */
+button:hover {
+    background: rgba(255, 255, 255, 0.2); /* Slight background visibility */
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Disabled Button */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+/* Volume Slider */
+#volumeControl {
+    -webkit-appearance: none; /* Remove default styles */
+    appearance: none;
+    width: 140px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.7); /* White track */
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Volume Slider Thumb (Draggable Circle) */
+#volumeControl::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: white; /* White thumb */
+    border-radius: 50%;
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#volumeControl::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+}
+
+/* Mozilla Firefox Slider Thumb */
+#volumeControl::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#volumeControl::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+}
+/* Volume Container */
+/* Volume Container */
+.volume-container {
+    display: flex;
+    align-items: center;  /* Align items vertically */
+    justify-content: center;  /* Center horizontally */
+    gap: 10px;  /* Space between icon and slider */
+    margin-top: 15px;
+    width: 100%; /* Ensure full width for centering */
+}
+
+/* Style the volume label (emoji) */
+.volume-container label {
+    font-size: 22px; /* Adjust size */
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+/* Style the volume slider */
+#volumeControl {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 150px;
+    height: 6px;
+    background: white;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+/* Custom Styling for Volume Slider Thumb */
+#volumeControl::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+#volumeControl:hover {
+    opacity: 1;
+}
+
+
+
+
+/* Timer Text */
+.focus-timer {
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Smooth Fade-in Effect */
+.container {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
